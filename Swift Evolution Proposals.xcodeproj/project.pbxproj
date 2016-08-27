@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2A101D445793A060D56E5EB /* Pods_Swift_Evolution_Proposals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D17CB99FE7FDD277F2143 /* Pods_Swift_Evolution_Proposals.framework */; };
+		F02564771D71EC4100252769 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F02564761D71EC4100252769 /* Podfile */; };
 		F0BF0A0E1D71B9CE00383C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0A0D1D71B9CE00383C38 /* AppDelegate.swift */; };
 		F0BF0A101D71B9CE00383C38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0A0F1D71B9CE00383C38 /* ViewController.swift */; };
 		F0BF0A131D71B9CE00383C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BF0A111D71B9CE00383C38 /* Main.storyboard */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A1D17CB99FE7FDD277F2143 /* Pods_Swift_Evolution_Proposals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Evolution_Proposals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		555A6CFAFC72FFE604CFCD50 /* Pods-Swift Evolution Proposals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Evolution Proposals.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift Evolution Proposals/Pods-Swift Evolution Proposals.debug.xcconfig"; sourceTree = "<group>"; };
+		F02564761D71EC4100252769 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F0BF0A0A1D71B9CE00383C38 /* Swift Evolution Proposals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Evolution Proposals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BF0A0D1D71B9CE00383C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0BF0A0F1D71B9CE00383C38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		F0BF0A171D71B9CE00383C38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0BF0A1A1D71B9CE00383C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0BF0A1C1D71B9CE00383C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC737B1DC2AD39E9D9F2BD99 /* Pods-Swift Evolution Proposals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Evolution Proposals.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift Evolution Proposals/Pods-Swift Evolution Proposals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A101D445793A060D56E5EB /* Pods_Swift_Evolution_Proposals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3729B8108BEAFD9113074591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D17CB99FE7FDD277F2143 /* Pods_Swift_Evolution_Proposals.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B2199E3EDF9FECBD6AC8BF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				555A6CFAFC72FFE604CFCD50 /* Pods-Swift Evolution Proposals.debug.xcconfig */,
+				FC737B1DC2AD39E9D9F2BD99 /* Pods-Swift Evolution Proposals.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0BF0A011D71B9CE00383C38 = {
 			isa = PBXGroup;
 			children = (
+				F02564761D71EC4100252769 /* Podfile */,
 				F0BF0A0C1D71B9CE00383C38 /* Swift Evolution Proposals */,
 				F0BF0A0B1D71B9CE00383C38 /* Products */,
+				8B2199E3EDF9FECBD6AC8BF8 /* Pods */,
+				3729B8108BEAFD9113074591 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0BF0A1F1D71B9CE00383C38 /* Build configuration list for PBXNativeTarget "Swift Evolution Proposals" */;
 			buildPhases = (
+				27A0CB9A243E45C02FF715DD /* Check Pods Manifest.lock */,
 				F0BF0A061D71B9CE00383C38 /* Sources */,
 				F0BF0A071D71B9CE00383C38 /* Frameworks */,
 				F0BF0A081D71B9CE00383C38 /* Resources */,
+				5212110A6B0174A48138C65C /* Embed Pods Frameworks */,
+				370054A6FF2B6D5AADA6655E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,11 +159,60 @@
 			files = (
 				F0BF0A1B1D71B9CE00383C38 /* LaunchScreen.storyboard in Resources */,
 				F0BF0A181D71B9CE00383C38 /* Assets.xcassets in Resources */,
+				F02564771D71EC4100252769 /* Podfile in Resources */,
 				F0BF0A131D71B9CE00383C38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27A0CB9A243E45C02FF715DD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		370054A6FF2B6D5AADA6655E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift Evolution Proposals/Pods-Swift Evolution Proposals-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5212110A6B0174A48138C65C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift Evolution Proposals/Pods-Swift Evolution Proposals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0BF0A061D71B9CE00383C38 /* Sources */ = {
@@ -263,6 +342,7 @@
 		};
 		F0BF0A201D71B9CE00383C38 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 555A6CFAFC72FFE604CFCD50 /* Pods-Swift Evolution Proposals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QM66W5D5E4;
@@ -276,6 +356,7 @@
 		};
 		F0BF0A211D71B9CE00383C38 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC737B1DC2AD39E9D9F2BD99 /* Pods-Swift Evolution Proposals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QM66W5D5E4;
@@ -306,6 +387,7 @@
 				F0BF0A211D71B9CE00383C38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
