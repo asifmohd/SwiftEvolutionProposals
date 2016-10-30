@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'Swift Evolution Proposals' do
 
-    pod 'SwiftyJSON', :git => 'https://github.com/BaiduHiDeviOS/SwiftyJSON.git', :branch => 'swift3'
-    pod 'Down', :git => 'https://github.com/asifmohd/Down', :branch => 'swift3'
+    pod 'SwiftyJSON'
+    pod 'Down'
+    pod 'MBProgressHUD'
 
 end
