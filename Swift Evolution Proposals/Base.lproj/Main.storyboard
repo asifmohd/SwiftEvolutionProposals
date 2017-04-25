@@ -12,7 +12,7 @@
         <!--Proposals-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ProposalListViewController" customModule="Swift_Evolution_Proposals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ProposalListViewController" customModule="Swift_Evolution_Proposals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="137.18140929535232"/>
         </scene>
-        <!--View Controller-->
+        <!--Proposal Detail View Controller-->
         <scene sceneID="HIM-Js-cve">
             <objects>
-                <viewController id="YKr-ok-iN0" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="YKr-ok-iN0" customClass="ProposalDetailViewController" customModule="Swift_Evolution_Proposals" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwU-15-QP3"/>
                         <viewControllerLayoutGuide type="bottom" id="D1X-5X-w76"/>
@@ -59,8 +59,23 @@
                     <view key="view" contentMode="scaleToFill" id="pcg-pj-JWP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3U-LA-p1c">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G3U-LA-p1c" firstAttribute="top" secondItem="dwU-15-QP3" secondAttribute="bottom" id="XJZ-fb-YyT"/>
+                            <constraint firstItem="G3U-LA-p1c" firstAttribute="leading" secondItem="pcg-pj-JWP" secondAttribute="leading" id="ZM0-aj-2zR"/>
+                            <constraint firstItem="D1X-5X-w76" firstAttribute="top" secondItem="G3U-LA-p1c" secondAttribute="bottom" id="mBQ-8B-R5l"/>
+                            <constraint firstAttribute="trailing" secondItem="G3U-LA-p1c" secondAttribute="trailing" id="rMa-Aa-Bn1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="proposalDetailView" destination="G3U-LA-p1c" id="Vw7-yp-Zj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEL-Lk-TSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +84,7 @@
         <!--Navigation Controller-->
         <scene sceneID="by2-s4-dVT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i4V-Yk-ghD" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="i4V-Yk-ghD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XqM-Bs-Xcv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

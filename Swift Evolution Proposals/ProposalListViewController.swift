@@ -42,6 +42,7 @@ class ProposalListViewController: UIViewController {
         }
         ProposalListTableViewCell.registerNibForTable(self.proposalsTableView)
         self.proposalsTableView.rowHeight = UITableViewAutomaticDimension
+        self.proposalsTableView.estimatedRowHeight = 64.0
         
         self.fetchResultsFromFRC()
     }
@@ -53,6 +54,16 @@ class ProposalListViewController: UIViewController {
         catch {
             print(error)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let proposalObj = sender as? Proposal else {
+            return
+        }
+        guard let destinationVC = segue.destination as? ProposalDetailViewController else {
+            return
+        }
+        destinationVC.passedProposalObj = proposalObj
     }
 
 }
@@ -72,6 +83,17 @@ extension ProposalListViewController: UITableViewDataSource {
         cell.idLabel.text = aProposal.id.description
         cell.nameLabel.text = aProposal.displayName
         return cell
+    }
+    
+}
+
+extension ProposalListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let proposalObj = self.proposalsFRC.object(at: indexPath)
+        self.performSegue(withIdentifier: "showProposalDetail", sender: proposalObj)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

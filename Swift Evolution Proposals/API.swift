@@ -51,7 +51,7 @@ struct GithubAPI {
                                 guard !displayName.isEmpty else {
                                     continue
                                 }
-                                guard let githubUrl = aProposal["url"].string else {
+                                guard let githubDownloadUrl = aProposal["download_url"].string else {
                                     continue
                                 }
                                 guard let fileSha = aProposal["sha"].string else {
@@ -77,7 +77,7 @@ struct GithubAPI {
                                 proposalEntity.githubName = proposalName
                                 proposalEntity.displayName = displayName
                                 proposalEntity.id = proposalId
-                                proposalEntity.url = githubUrl
+                                proposalEntity.downloadUrl = githubDownloadUrl
                                 proposalEntity.sha = fileSha
                             }
                             
@@ -88,6 +88,41 @@ struct GithubAPI {
                                 print(error)
                             }
                             completionHandler()
+        })
+        dataTask.resume()
+    }
+    
+    func getDetailsOf(proposal: Proposal, completionHandler: @escaping ((Void) -> Void)) {
+        let proposalDetailUrl = URL(string: proposal.downloadUrl!)!
+        let request = URLRequest(url: proposalDetailUrl,
+                                 cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData,
+                                 timeoutInterval: APIConstants.TimeoutValue)
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        
+        
+        
+        let dataTask = session.dataTask(with: request,
+                                        completionHandler: { (responseData: Data?,
+                                            response: URLResponse?,
+                                            errorVal: Error?) in
+                                            guard let responseData = responseData else {
+                                                completionHandler()
+                                                return
+                                            }
+                                            let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.newBackgroundContext()
+                                            
+                                            let fetchRequest: NSFetchRequest<Proposal> = Proposal.fetchRequest()
+                                            fetchRequest.predicate = NSPredicate(format: "id = %d", argumentArray: [proposal.id])
+                                            do {
+                                                if let existingProposal = try moc.fetch(fetchRequest).first {
+                                                    existingProposal.data = responseData as NSData?
+                                                    try moc.save()
+                                                }
+                                            }
+                                            catch {
+                                                print(error)
+                                            }
+                                            completionHandler()
         })
         dataTask.resume()
     }

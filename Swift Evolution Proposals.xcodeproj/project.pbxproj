@@ -10,6 +10,7 @@
 		8663C28C03BA00865D7B027D /* Pods_Swift_Evolution_Proposals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B46FE9B99E124324571A333 /* Pods_Swift_Evolution_Proposals.framework */; };
 		F02564771D71EC4100252769 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F02564761D71EC4100252769 /* Podfile */; };
 		F02564791D71F7C200252769 /* ProposalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02564781D71F7C200252769 /* ProposalListViewController.swift */; };
+		F049C6AB1DC6498F00B5EC77 /* ProposalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F049C6AA1DC6498F00B5EC77 /* ProposalDetailViewController.swift */; };
 		F0BF0A0E1D71B9CE00383C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0A0D1D71B9CE00383C38 /* AppDelegate.swift */; };
 		F0BF0A131D71B9CE00383C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BF0A111D71B9CE00383C38 /* Main.storyboard */; };
 		F0BF0A161D71B9CE00383C38 /* Swift_Evolution_Proposals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0A141D71B9CE00383C38 /* Swift_Evolution_Proposals.xcdatamodeld */; };
@@ -28,6 +29,7 @@
 		B04A3553D71016C66EAD4127 /* Pods-Swift Evolution Proposals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Evolution Proposals.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift Evolution Proposals/Pods-Swift Evolution Proposals.release.xcconfig"; sourceTree = "<group>"; };
 		F02564761D71EC4100252769 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F02564781D71F7C200252769 /* ProposalListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalListViewController.swift; sourceTree = "<group>"; };
+		F049C6AA1DC6498F00B5EC77 /* ProposalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProposalDetailViewController.swift; sourceTree = "<group>"; };
 		F0BF0A0A1D71B9CE00383C38 /* Swift Evolution Proposals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Evolution Proposals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BF0A0D1D71B9CE00383C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0BF0A121D71B9CE00383C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				F0D42E501DC52BF80075FDC4 /* API.swift */,
 				F0D42E521DC52E360075FDC4 /* GlobalConstants.swift */,
 				F0BF0A111D71B9CE00383C38 /* Main.storyboard */,
+				F049C6AA1DC6498F00B5EC77 /* ProposalDetailViewController.swift */,
 				F0D42E541DC536D80075FDC4 /* ProposalListTableViewCell.swift */,
 				F0D42E5A1DC53CE00075FDC4 /* CustomExtensions.swift */,
 				F0D42E581DC537AF0075FDC4 /* TableCellReuseProtocol.swift */,
@@ -246,6 +249,7 @@
 				F0D42E511DC52BF80075FDC4 /* API.swift in Sources */,
 				F0BF0A0E1D71B9CE00383C38 /* AppDelegate.swift in Sources */,
 				F0D42E561DC536D80075FDC4 /* ProposalListTableViewCell.swift in Sources */,
+				F049C6AB1DC6498F00B5EC77 /* ProposalDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
